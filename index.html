@@ -8,18 +8,53 @@
     html, body {
       margin: 0;
       padding: 0;
-      height: 100%;
       background-color: #000;
+      scroll-behavior: smooth; /* 👈 cuộn mượt */
     }
+
     body {
       display: flex;
       justify-content: center;
       align-items: flex-start;
+      overflow-x: hidden;
     }
+
     img {
       width: 100%;
       height: auto;
       display: block;
+      max-width: 1200px; /* 👈 giữ ảnh không quá to ở màn hình lớn */
+      margin: 0 auto;
+      box-shadow: 0 0 40px rgba(0,0,0,0.5);
+      border-radius: 8px;
+    }
+
+    /* 👇 Hiệu ứng fade-in nhẹ khi cuộn */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    img {
+      animation: fadeInUp 1.2s ease-out;
+    }
+
+    /* 👇 Thanh cuộn tùy chỉnh cho đẹp hơn */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, #ff4d4d, #8b0000);
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #1a1a1a;
     }
   </style>
 </head>
@@ -27,3 +62,4 @@
   <img src="portfolio.png" alt="My Portfolio">
 </body>
 </html>
+
