@@ -2,64 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
+  <title>Choose Language | Portfolio</title>
   <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      background-color: #000;
-      scroll-behavior: smooth; /* 👈 cuộn mượt */
-    }
-
     body {
+      font-family: Arial, sans-serif;
+      background: #f8f9fb;
       display: flex;
+      flex-direction: column;
+      align-items: center;
       justify-content: center;
-      align-items: flex-start;
-      overflow-x: hidden;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
     }
-
-    img {
-      width: 100%;
-      height: auto;
-      display: block;
-      max-width: 1200px; /* 👈 giữ ảnh không quá to ở màn hình lớn */
-      margin: 0 auto;
-      box-shadow: 0 0 40px rgba(0,0,0,0.5);
-      border-radius: 8px;
+    h1 {
+      margin-bottom: 20px;
+      color: #222;
+      font-size: 1.8rem;
     }
-
-    /* 👇 Hiệu ứng fade-in nhẹ khi cuộn */
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    .lang-btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 20px;
+      border-radius: 12px;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      transition: all 0.2s ease;
     }
-
-    img {
-      animation: fadeInUp 1.2s ease-out;
+    .lang-btn:hover {
+      background: #e9eefc;
+      transform: translateY(-3px);
     }
-
-    /* 👇 Thanh cuộn tùy chỉnh cho đẹp hơn */
-    ::-webkit-scrollbar {
-      width: 8px;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: linear-gradient(180deg, #ff4d4d, #8b0000);
-      border-radius: 10px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #1a1a1a;
+    footer {
+      position: absolute;
+      bottom: 20px;
+      font-size: 0.9rem;
+      color: #888;
     }
   </style>
 </head>
 <body>
-  <img src="portfolio.png" alt="My Portfolio">
+  <h1>🌐 Choose Your Language</h1>
+  <div>
+    <a class="lang-btn" href="index-en.html">🇬🇧 English</a>
+    <a class="lang-btn" href="index-vi.html">🇻🇳 Tiếng Việt</a>
+    <a class="lang-btn" href="index-ru.html">🇷🇺 Русский</a>
+  </div>
+  <footer>© 2025 Hoang Dinh | From Languages to Leadership</footer>
 </body>
 </html>
-
